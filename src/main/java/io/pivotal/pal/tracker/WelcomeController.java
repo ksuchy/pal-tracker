@@ -11,7 +11,7 @@ public class WelcomeController {
     String message;
 
     @Autowired
-    public WelcomeController(@Value("${welcome.message}") String message){
+    public WelcomeController(@Value("${welcome.message:NOT SET}") String message){
         this.message = message;
     }
 

@@ -1,5 +1,6 @@
 package io.pivotal.pal.tracker;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,8 +27,10 @@ public class EnvController {
         this.cfInstanceAddr = cfInstanceAddr;
     }
 
+
     @GetMapping("/env")
-    public Map<String, String> getEnv(){
+    public Map<String, String> getEnv() {
+
         Map<String, String> env = new HashMap<>();
 
         env.put("PORT", port);
